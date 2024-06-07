@@ -1,0 +1,61 @@
+:root {
+    --transparent-dark-grey: rgba(43, 43, 43, 0.726);
+    --transparent-light-grey: rgba(124, 124, 124, 0.726);
+    --light-grey: grey;
+    --border-grey: rgba(245, 245, 245, 0.685);
+    --white: #b4b4b4;
+}
+
+.weatherContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    background-color: var(--transparent-dark-grey);
+    margin: 10px 0 0 10px;
+    border-radius: 50px;
+    width: 200px;
+}
+
+.searchInput {
+    padding: 5px 15px;
+    border: none;
+    color: var(--white);
+    background-color: transparent;
+    width: 80%;
+}
+
+.searchInput:disabled {
+    padding-left: 10px;
+}
+
+.searchInput:focus-visible {
+    padding-left: 10px;
+}
+
+.searchInput::placeholder {
+    padding-left: 10px;
+}
+
+.searchInput:focus {
+    padding-left: 15px;
+    outline: none;
+}
+
+.submitButton {
+    background-color: transparent;
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    opacity: 0.8;
+}
+
