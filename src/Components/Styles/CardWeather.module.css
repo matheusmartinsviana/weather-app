@@ -1,0 +1,42 @@
+.weatherCard {
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px var(--transparent-light-grey);
+    margin-top: 10px;
+    background-color: var(--border-grey);
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.CardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+    .description {
+    text-transform: capitalize;
+}
+
+.weatherContent {
+    gap: 10px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+}
+
+@media (max-width: 720px) {
+
+    .weatherCard {
+        width: 350px;
+        flex-direction: column;
+    }
+
+    .weatherCard img {
+        height: 100px;
+        width: 100px;
+    }
+}

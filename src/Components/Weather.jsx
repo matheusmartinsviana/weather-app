@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react"
 import axios from "axios"
+import React, { useEffect, useState } from "react"
+import { IoSearch } from "react-icons/io5";
+import CardWeather from "./CardWeather";
 import style from "./Styles/Weather.module.css"
 
 const api = {
@@ -9,14 +11,17 @@ const api = {
 const Weather = () => {
   const [city, setCity] = useState('')
   const [weatherData, setWeatherData] = useState(null)
+  const [loading, setLoading] = useState(false);
 
   const fecthData = async () => {
     try {
+      setLoading(true)
       const reponse = await axios.get(`${api.base}weather?q=${city}&units=metric&appid=${api.key}&lang=pt_br`)
       console.log(reponse.data)
       setWeatherData(reponse.data)
     } catch (error) {
       console.log(error)
+      setLoading(false)
     }
   }
 
@@ -35,29 +40,34 @@ const Weather = () => {
 
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          className={style.searchInput}
-          type="text"
-          placeholder="Digite o nome da sua cidade"
-          value={city}
-          onChange={handleInputChange}
-        />
-        <button className={style.submitButton} type="submit">Ver tempo da sua cidade</button>
-      </form>
+    <div className={style.weatherContainer}>
+      <div className={style.searchForm}>
+        <form onSubmit={handleSubmit}>
+          <input
+            className={style.searchInput}
+            type="text"
+            placeholder="Localização"
+            value={city}
+            onChange={handleInputChange}
+          />
+          <button className={style.submitButton} type="submit"><IoSearch /></button>
+        </form>
+      </div>
       {weatherData ? (
-        <div className={style.weatherCard}>
-          <h2 className={style.locationName} >{weatherData.name}</h2>
-          <p className={style.temp} >Temperatura: {weatherData.main.temp}°C</p>
-          <p className={style.description} >Descrição: {weatherData.weather[0].description}</p>
-          <p className={style.feels_like} >Tipo: {weatherData.main.feels_like}</p>
-          <p className={style.humidity} >Humidade: {weatherData.main.humidity}%</p>
-          <p className={style.pressure} >Pressão do ar: {weatherData.main.pressure}</p>
-          <p className={style.windSpeed} >Velocidade do vento: {weatherData.wind.speed}m/s</p>
-        </div>
+        <>
+          <CardWeather
+            name={weatherData.name}
+            country={weatherData.sys.country}
+            temp={weatherData.main.temp}
+            description={weatherData.weather[0].description}
+            thermalSensation={weatherData.main.feels_like}
+            humidity={weatherData.main.humidity}
+            pressure={weatherData.main.pressure}
+            wind={weatherData.wind.speed}
+          />
+        </>
       ) : (
-        <p>Carregando os dados da temperatura...</p>
+        <p>{loading ? 'Carregando...' : 'Digite o nome de uma cidade para ver a previsão do tempo.'}</p>
       )}
     </div>
   )
