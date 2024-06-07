@@ -1,0 +1,39 @@
+:root {
+    --light-grey: rgb(223, 223, 223);
+    --black: rgb(43, 43, 43);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--light-grey);
+    gap: 35px
+}
+
+.brand p {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+header p {
+    padding: 0 0 0 10px;
+}
+
+.headerLinks {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+ul {
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.link {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.1rem;
+}

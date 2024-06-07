@@ -1,0 +1,6 @@
+.container {
+    display: flex;
+    background: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #0c213596), grey;
+    height: 100vh;
+    object-fit: cover;
+}
