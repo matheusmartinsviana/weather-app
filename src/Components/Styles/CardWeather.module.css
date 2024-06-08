@@ -13,12 +13,14 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    text-align: start;
 }
     .description {
     text-transform: capitalize;
 }
 
 .weatherContent {
+    text-align: start;
     gap: 10px;
     font-size: 13px;
     display: flex;
