@@ -9,9 +9,12 @@
 .weatherContainer {
     display: flex;
     align-items: center;
+    justify-content: center;
+    height: 400px;
     flex-direction: column;
     background-color: transparent;
     width: 100%;
+    text-align: center;
 }
 
 form {
