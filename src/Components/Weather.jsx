@@ -1,8 +1,9 @@
-import axios from "axios"
-import React, { useEffect, useState } from "react"
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import CardWeather from "./CardWeather";
-import style from "./Styles/Weather.module.css"
+import style from "./Styles/Weather.module.css";
+import WeatherInfo from "./WeatherInfo";
 
 const api = {
   key: 'b32daa9a9fcf66937b481e532e0d14d9',
@@ -17,7 +18,6 @@ const Weather = () => {
     try {
       setLoading(true)
       const reponse = await axios.get(`${api.base}weather?q=${city}&units=metric&appid=${api.key}&lang=pt_br`)
-      console.log(reponse.data)
       setWeatherData(reponse.data)
     } catch (error) {
       console.log(error)
@@ -56,6 +56,7 @@ const Weather = () => {
       {weatherData ? (
         <>
           <CardWeather
+            icon={weatherData.weather[0].icon}
             name={weatherData.name}
             country={weatherData.sys.country}
             temp={weatherData.main.temp}
@@ -65,6 +66,7 @@ const Weather = () => {
             pressure={weatherData.main.pressure}
             wind={weatherData.wind.speed}
           />
+        <WeatherInfo cityApi={weatherData.name}/>
         </>
       ) : (
         <p>{loading ? 'Carregando...' : 'Digite o nome de uma cidade para ver a previsão do tempo.'}</p>

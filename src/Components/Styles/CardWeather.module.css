@@ -2,8 +2,8 @@
     border-radius: 5px;
     box-shadow: 5px 5px 10px var(--transparent-light-grey);
     margin-top: 10px;
-    background-color: var(--border-grey);
-    padding: 10px 10px;
+    background-color: rgb(184, 184, 184);
+    padding: 20px 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -12,17 +12,20 @@
 .CardHeader {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 20px;
     text-align: start;
 }
-    .description {
+
+.description {
+    display: flex;
+    align-items: center;
     text-transform: capitalize;
 }
 
 .weatherContent {
     text-align: start;
     gap: 10px;
-    font-size: 13px;
+    font-size: 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
