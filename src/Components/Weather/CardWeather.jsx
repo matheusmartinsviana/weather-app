@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Styles/CardWeather.module.css";
-import icon from "../assets/img/pngegg.png"
+import icon from "../../assets/img/pngegg.png"
 
 export default function CardWeather(props) {
     return (

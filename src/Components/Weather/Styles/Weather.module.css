@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 400px;
+    min-height: 50vh;
     flex-direction: column;
     background-color: transparent;
     width: 100%;
