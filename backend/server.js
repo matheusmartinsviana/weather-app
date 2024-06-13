@@ -1,14 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const app = express();
-const cors = require('cors')
-const ApiController = require('./controller/ApiController')
+const cors = require('cors');
+const ApiController = require('./controller/ApiController');
 
-app.use(cors())
+const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
-const apiController = new ApiController()
-app.post('/send-email', apiController.sendEmail)
+const apiController = new ApiController();
+app.post('/send-email', apiController.sendEmail);
 
 const PORT = 5000;
 app.listen(PORT, () => {

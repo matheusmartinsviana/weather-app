@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    padding: 50px 20px 50px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+section:nth-child(1) {
+    display: flex;
+    text-align: left;
+    align-self: start;
+    flex-direction: column;
+    width: 500px;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 15px;
+}
+
+.sectionHeader img {
+    border-radius: 20px;
+}
+
+section:nth-child(2) {
+    display: flex;
+    align-self: start;
+    flex-direction: column;
+    width: 500px;
+}

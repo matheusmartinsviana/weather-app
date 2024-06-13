@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import './Styles/Header.css'
+import './Styles/Header.css';
 
 const navbarStyle = {
     backgroundColor: 'grey',
@@ -28,11 +28,7 @@ function Header() {
                             </Offcanvas.Header>
                             <Offcanvas.Body>
                                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                                    <Nav.Link href="#action1">Início</Nav.Link>
-                                    <Nav.Link href="#action2">Sobre</Nav.Link>
-                                    <Nav.Link href="#action2">Clima</Nav.Link>
-                                    <Nav.Link href="#action2">Via Email</Nav.Link>
-                                    <Nav.Link href="#action2">Código Fonte</Nav.Link>
+                                    <Nav.Link href="https://github.com/matheusmartinsviana/weather-app.git" target="_blank">Código Fonte</Nav.Link>
                                 </Nav>
                             </Offcanvas.Body>
                         </Navbar.Offcanvas>

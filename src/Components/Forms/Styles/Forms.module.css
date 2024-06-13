@@ -1,0 +1,86 @@
+.formsContainer {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    padding: 50px 0 50px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.formsContainer form {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.emailInput {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 50px;
+    color: rgb(202, 202, 202);
+    background-color: #505050;
+    width: 280px;
+    text-align: center;
+}
+
+.emailInput:disabled {
+    color: rgb(202, 202, 202);
+
+    padding-left: 10px;
+}
+
+.emailInput:focus {
+    padding-left: 15px;
+    outline: none;
+}
+
+.submitButton {
+    width: 150px;
+    background-color: #888888;
+    color: #e4e4e4;
+    padding: 6px;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.submitButton:hover {
+    background-color: #757575;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.closeButton {
+    background-color: #888888;
+    color: #e4e4e4;
+    padding: 6px;
+    border: none;
+    transition: all 0.5s;
+    border-radius: 20px;
+}
+
+.closeButton:hover {
+    background-color: #757575;
+}
+

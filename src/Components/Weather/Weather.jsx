@@ -9,24 +9,26 @@ const api = {
   key: 'b32daa9a9fcf66937b481e532e0d14d9',
   base: 'https://api.openweathermap.org/data/2.5/',
 }
+
 const Weather = () => {
   const [city, setCity] = useState('')
   const [weatherData, setWeatherData] = useState(null)
   const [loading, setLoading] = useState(false);
 
-  const fecthData = async () => {
+  const fetchData = async () => {
     try {
       setLoading(true)
-      const reponse = await axios.get(`${api.base}weather?q=${city}&units=metric&appid=${api.key}&lang=pt_br`)
-      setWeatherData(reponse.data)
+      const response = await axios.get(`${api.base}weather?q=${city}&units=metric&appid=${api.key}&lang=pt_br`)
+      setWeatherData(response.data)
     } catch (error) {
       console.log(error)
+    } finally {
       setLoading(false)
     }
   }
 
   useEffect(() => {
-    fecthData()
+    fetchData()
   }, [])
 
   const handleInputChange = (e) => {
@@ -35,9 +37,8 @@ const Weather = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    fecthData()
+    fetchData()
   }
-
 
   return (
     <div className={style.weatherContainer}>
@@ -66,7 +67,7 @@ const Weather = () => {
             pressure={weatherData.main.pressure}
             wind={weatherData.wind.speed}
           />
-        <WeatherInfo cityApi={weatherData.name}/>
+          <WeatherInfo cityApi={weatherData.name}/>
         </>
       ) : (
         <p>{loading ? 'Carregando...' : 'Digite o nome de uma cidade para ver a previsão do tempo.'}</p>

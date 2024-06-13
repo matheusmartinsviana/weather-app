@@ -1,8 +1,15 @@
 .cardContainer {
+    padding: 10px 0 50px 0;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.weatherTitle {
+    padding-top: 50px;
 }
 
 .card {
@@ -42,4 +49,8 @@
     text-transform: capitalize;
     width: 100px;
     justify-content: center;
+}
+
+.forms {
+    padding: 50px 0 50px 0;
 }

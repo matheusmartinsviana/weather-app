@@ -1,13 +1,13 @@
-import style from "./Styles/Inicio.module.css"
+import About from "../Components/Inicio/About"
 import Weather from "../Components/Weather/Weather"
-import Forms from "../Components/Forms"
+import style from "./Styles/Inicio.module.css"
 
 export default function Inicio() {
 
     return (
         <div className={style.container}>
             <Weather />
-            <Forms />
+            <About />
         </div>
     )
 }

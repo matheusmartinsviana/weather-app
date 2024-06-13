@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Forms from '../Forms/Forms';
 import CardWeatherInfo from './CardWeatherInfo';
 import style from './Styles/CardWeatherInfo.module.css';
-import Weather from './Weather';
 
-export default function WeatherInfo(props) {
+export default function WeatherInfo({ cityApi }) {
     const [data, setData] = useState([]);
     const [city, setCity] = useState({});
     const [loading, setLoading] = useState(false);
@@ -14,25 +14,25 @@ export default function WeatherInfo(props) {
         base: 'https://api.openweathermap.org/data/2.5/',
     };
 
-    const fetchData = async () => {
-        try {
-            setLoading(true);
-            const cityResponse = await axios.get(`${api.base}weather?q=${props.cityApi}&units=metric&appid=${api.key}&lang=pt_br`);
-            setCity(cityResponse.data);
-            const { lat, lon } = cityResponse.data.coord;
-            const forecastResponse = await axios.get(`${api.base}forecast?lat=${lat}&lon=${lon}&units=metric&appid=${api.key}&lang=pt_br`);
-            setData(forecastResponse.data.list);
-            console.log(forecastResponse.data.list)
-        } catch (error) {
-            console.log(error);
-        } finally {
-            setLoading(false);
-        }
-    };
-
     useEffect(() => {
+        const fetchData = async () => {
+            try {
+                setLoading(true);
+                const cityResponse = await axios.get(`${api.base}weather?q=${cityApi}&units=metric&appid=${api.key}&lang=pt_br`);
+                setCity(cityResponse.data);
+                const { lat, lon } = cityResponse.data.coord;
+                const forecastResponse = await axios.get(`${api.base}forecast?lat=${lat}&lon=${lon}&units=metric&appid=${api.key}&lang=pt_br`);
+                setData(forecastResponse.data.list);
+                console.log(forecastResponse.data.list);
+            } catch (error) {
+                console.log(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
         fetchData();
-    }, [props.cityApi]);
+    }, [cityApi]);
 
     return (
         <>
@@ -40,9 +40,8 @@ export default function WeatherInfo(props) {
                 "Carregando..."
             ) : (
                 <>
-                    <h1>Previsão do tempo em {city.name}</h1>
+                    <h1 className={style.weatherTitle}>Previsão do tempo em {city.name}</h1>
                     <div className={style.cardContainer}>
-
                         {data.slice(0, 7).map((forecast, index) => (
                             <CardWeatherInfo
                                 key={index}
@@ -52,6 +51,7 @@ export default function WeatherInfo(props) {
                                 icon={forecast.weather[0].icon}
                             />
                         ))}
+                        <Forms weatherInfo={{ city, forecast: data.slice(0, 7) }} />
                     </div>
                 </>
             )}
