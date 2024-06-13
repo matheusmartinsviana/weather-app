@@ -8,18 +8,9 @@ export default function Footer() {
                 <img src={icon} alt="Weather Logo" height={100} width={100}/>
             </div>
             <section className={style.siteMapLinks}>
-                <h2>Mapa do Site</h2>
+                <h2>Links Úteis</h2>
                 <ul>
-                    <li><a className={style.link} href="#">Início</a></li>
-                </ul>
-                <ul>
-                    <li><a className={style.link} href="#">Sobre</a></li>
-                </ul>
-                <ul>
-                    <li><a className={style.link} href="#">Clima</a></li>
-                </ul>
-                <ul>
-                    <li><a className={style.link} href="#">Patrocinador</a></li>
+                    <li><a className={style.link} href="https://github.com/matheusmartinsviana/weather-app.git">Codígo Fonte</a></li>
                 </ul>
             </section>
         </footer>
