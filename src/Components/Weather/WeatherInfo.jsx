@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Forms from '../Forms/Forms';
-import CardWeatherInfo from './CardWeatherInfo';
+import WeatherSlider from './WeatherSlider';
 import style from './Styles/CardWeatherInfo.module.css';
 
 export default function WeatherInfo({ cityApi }) {
@@ -41,18 +41,8 @@ export default function WeatherInfo({ cityApi }) {
             ) : (
                 <>
                     <h1 className={style.weatherTitle}>Previsão do tempo em {city.name}</h1>
-                    <div className={style.cardContainer}>
-                        {data.slice(0, 7).map((forecast, index) => (
-                            <CardWeatherInfo
-                                key={index}
-                                time={forecast.dt_txt}
-                                temp={forecast.main.temp}
-                                description={forecast.weather[0].description}
-                                icon={forecast.weather[0].icon}
-                            />
-                        ))}
-                        <Forms weatherInfo={{ city, forecast: data.slice(0, 7) }} />
-                    </div>
+                    <WeatherSlider data={data.slice(0, 7)} />
+                    <Forms weatherInfo={{ city, forecast: data.slice(0, 7) }} />
                 </>
             )}
         </>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import style from "./Styles/Forms.module.css";
+import logoIcon from "../../assets/img/pngegg.png";
 
 export default function Forms({ weatherInfo }) {
     const [recipient, setRecipient] = useState('');
@@ -7,14 +8,14 @@ export default function Forms({ weatherInfo }) {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        
+
         const data = {
             recipient,
             weatherInfo
         };
 
         try {
-            const response = await fetch('http://localhost:5000/send-email', {
+            const response = await fetch('http://localhost:5000/api/v1/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -36,22 +37,29 @@ export default function Forms({ weatherInfo }) {
 
     return (
         <div className={style.formsContainer}>
-            <h2>Receba a previsão de via <strong>Email</strong></h2>
+            <div className={style.formsHeader}>
+                <h2>Deseja receber via email?</h2>
+            </div>
             <form onSubmit={handleSubmit}>
-                Digite seu email:
-                <input
-                    className={style.emailInput}
-                    type="email"
-                    value={recipient}
-                    onChange={(e) => setRecipient(e.target.value)}
-                    placeholder="email@dominio.com"
-                    required
-                />
-                <button className={style.submitButton} type="submit">Enviar email</button>
+                <div>
+                    
+                    <input
+                        className={style.emailInput}
+                        type="email"
+                        value={recipient}
+                        onChange={(e) => setRecipient(e.target.value)}
+                        placeholder="email@dominio.com"
+                        required
+                    />
+                </div>
+                <button className={style.submitButton} type="submit">
+                    Receber
+                </button>
             </form>
             {modalVisible && (
                 <div className={style.modal}>
                     <div className={style.modalContent}>
+                    <img src={logoIcon} height={50} width={50} />
                         <p>Email enviado com sucesso. Verifique sua caixa de spam.</p>
                         <button className={style.closeButton} onClick={closeModal}>Fechar</button>
                     </div>

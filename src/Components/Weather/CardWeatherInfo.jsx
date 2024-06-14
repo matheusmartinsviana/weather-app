@@ -1,7 +1,7 @@
 import React from 'react';
-import style from './Styles/CardWeatherInfo.module.css'; // Assuming you have a CSS file for styling
+import style from './Styles/CardWeatherInfo.module.css';
 
-export default function CardWeatherInfo(props) {
+function CardWeatherInfo(props) {
     function verifyDate() {
         const date = new Date(props.time);
         const currentDate = new Date();
@@ -17,7 +17,7 @@ export default function CardWeatherInfo(props) {
     const { isToday, isTomorrow } = verifyDate();
 
     return (
-        <div className={style.container}>
+        <div className={style.cardContainer}>
             <div className={style.card}>
                 <div className={style.cardHeader}>
                     <img src={`http://openweathermap.org/img/wn/${props.icon}.png`} alt={props.description} />
@@ -32,3 +32,5 @@ export default function CardWeatherInfo(props) {
         </div>
     );
 }
+
+export default CardWeatherInfo;

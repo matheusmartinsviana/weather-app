@@ -8,7 +8,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const apiController = new ApiController();
-app.post('/send-email', apiController.sendEmail);
+app.post('/api/v1/send-email', apiController.sendEmail);
 
 const PORT = 5000;
 app.listen(PORT, () => {

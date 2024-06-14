@@ -1,4 +1,3 @@
-const express = require('express');
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey('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');
 

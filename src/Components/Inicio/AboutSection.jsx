@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./Styles/About.module.css"
+import style from "./Styles/AboutSection.module.css"
 import openWeatherLogo from "../../assets/img/open-weather-logo.png"
 import weatherApp from "../../assets/img/pngegg.png"
 

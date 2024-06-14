@@ -1,0 +1,13 @@
+.sliderContainer {
+    margin: 20px auto;
+    width: 60%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+.slick-dots li button:before {
+    color: black;
+}

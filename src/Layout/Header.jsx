@@ -28,6 +28,7 @@ function Header() {
                             </Offcanvas.Header>
                             <Offcanvas.Body>
                                 <Nav className="justify-content-end flex-grow-1 pe-3">
+                                    <Nav.Link href="/">Início</Nav.Link>
                                     <Nav.Link href="https://github.com/matheusmartinsviana/weather-app.git" target="_blank">Código Fonte</Nav.Link>
                                 </Nav>
                             </Offcanvas.Body>

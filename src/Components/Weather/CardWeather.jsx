@@ -8,7 +8,7 @@ export default function CardWeather(props) {
             <div className={style.weatherCardContent}>
                 <div className={style.CardHeader}>
             <img src={`http://openweathermap.org/img/wn/${props.icon}.png`} alt="Logo Weather" height={50} width={50} />
-                    <h2>{props.name}, {props.country}</h2>
+                    <h2>{props.name}, {props.country}</h2> agora
                 </div>
                     <div className={style.weatherDescription}>
                         <p className={style.description}> {props.description}, {props.temp}°C </p>
