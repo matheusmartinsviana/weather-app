@@ -1,12 +1,12 @@
+# Weather app 
 <img src="./src/assets/img/pngegg.png" height="80" weight="80">
-# Weather App 
-<p>O weather app é um exemplo de website utilizando react e conceitos de back-end como integrações com 
-APIs, exclusivamente com o <a href="https://openweathermap.org/api" target="_blank">Open Weather API</a> que 
-fornece uma versão gratuita com diversas informações de alguma região desejada.</p>
+<p>The Weather application is an example of a website using react and back-end concepts such as integrations with 
+APIs, exclusively with the <a href="https://openweathermap.org/api" target="_blank">Open Weather API</a> that 
+provides a free version with various information about any desired region.</p>
 
 # Deploy
-1. Na pasta raiz do peojeto use `cd backend`
-2. Instale as dependências `npm i`
-3. Volte para a pasta raiz usando: `cd ..`
-4. Agora com o servidor backend ligado, use na pasta raiz: `npm run dev`
-5. Agora basta abrir o seu navegador e digitar: `http://localhost:5173/`
+1. In the root folder of the project use `cd backend`
+2. Install `npm i` dependencies
+3. Go back to the root folder using: `cd..`
+4. Now with the backend server turned on, use the root folder: `npm run dev`
+5. Now just open your browser and type: `http://localhost:5173/`
