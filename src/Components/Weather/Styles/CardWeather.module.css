@@ -1,14 +1,25 @@
 .weatherCard {
     border-radius: 5px;
-    box-shadow: 5px 5px 10px var(--transparent-light-grey);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     margin-top: 10px;
-    background-color: rgb(184, 184, 184);
+    background-color: #0469c73d;
     padding: 20px 20px;
     display: flex;
+    font-weight: 350;
     flex-direction: row;
     align-items: center;
     margin-bottom: 60px;
     transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.weatherCard h2 {
+    text-transform: capitalize;
+    font-weight: 350;
+}
+
+.weatherContainer h2 {
+    font-weight: 300;
 }
 
 .CardHeader {

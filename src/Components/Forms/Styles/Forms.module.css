@@ -16,6 +16,7 @@
 
 .formsHeader {
     margin-bottom: 20px;
+    color: black;
     display: flex;
     gap: 20px;
 }

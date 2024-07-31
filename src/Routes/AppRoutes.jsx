@@ -7,8 +7,8 @@ export default function AppRoutes() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Body />}>
-                    <Route path="/" element={<Inicio />} />
+                <Route path="/weather-app" element={<Body />}>
+                    <Route path="/weather-app" element={<Inicio />} />
                 </Route>
             </Routes>
         </BrowserRouter>

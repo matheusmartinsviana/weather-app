@@ -1,0 +1,19 @@
+.navContainer {
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);
+    background: linear-gradient(to right, #26D0CE, #1A2980);
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.navContainer p {
+    font-weight: 300;
+}
+
+.navContainer img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
