@@ -47,11 +47,11 @@ const Weather = () => {
           <input
             className={style.searchInput}
             type="text"
-            placeholder="Localização"
+            placeholder="Digite sua cidade"
             value={city}
             onChange={handleInputChange}
           />
-          <button className={style.submitButton} type="submit"><IoSearch /></button>
+          <button className={style.submitButton} type="submit"><IoSearch size={20} style={{ marginRight: '15px' }} /></button>
         </form>
       </div>
       {weatherData ? (
@@ -67,7 +67,7 @@ const Weather = () => {
             pressure={weatherData.main.pressure}
             wind={weatherData.wind.speed}
           />
-          <WeatherInfo cityApi={weatherData.name}/>
+          <WeatherInfo cityApi={weatherData.name} />
         </>
       ) : (
         <p>{loading ? 'Carregando...' : 'Digite o nome de uma cidade para ver a previsão do tempo.'}</p>

@@ -15,39 +15,33 @@
     background-color: transparent;
     width: 100%;
     text-align: center;
+    transition: all ease-in-out .6;
+}
+
+.weatherContainer p {
+    font-weight: 300;
+}
+
+.weatherContainer h1 {
+    font-weight: 350;
 }
 
 form {
     display: flex;
     align-items: center;
-    background-color: var(--transparent-dark-grey);
     margin: 10px 0 0 10px;
     border-radius: 50px;
-    width: 200px;
+    max-width: 240px;
+    background-color: #0469c73d;
 }
 
 .searchInput {
-    padding: 5px 15px;
+    padding: 9px 20px;
     border: none;
     color: var(--white);
     background-color: transparent;
-    width: 80%;
-}
-
-.searchInput:disabled {
-    padding-left: 10px;
-}
-
-.searchInput:focus-visible {
-    padding-left: 10px;
-}
-
-.searchInput::placeholder {
-    padding-left: 10px;
-}
-
-.searchInput:focus {
-    padding-left: 15px;
+    width: 100%;
+    font-size: 1.2rem;
     outline: none;
 }
 
