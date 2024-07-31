@@ -4,9 +4,9 @@ import style from "./Styles/Inicio.module.css"
 
 export default function Inicio() {
     return (
-        <div className={style.container}>
-            <Weather />
-            <AboutSection />
-        </div>
+            <div className={style.container}>
+                <Weather />
+                <AboutSection />
+            </div>
     )
 }

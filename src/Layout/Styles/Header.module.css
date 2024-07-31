@@ -3,17 +3,37 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);
-    background: linear-gradient(to right, #26D0CE, #1A2980);
+    background: #1e3c72;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2a5298, #1e3c72);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2a5298, #1e3c72);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100%;
     width: 100%;
     color: white;
+    transition: all ease-in-out .2;
+}
+
+.navContainer img {
+    margin-left: 10px;
+    height: auto;
 }
 
 .navContainer p {
     font-weight: 300;
+    margin: 0;
+    animation: typing 3s;
+    text-wrap: nowrap;
+    overflow: hidden;
 }
 
-.navContainer img {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 240px;
+    }
 }
