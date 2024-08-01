@@ -1,14 +1,14 @@
 .weatherCard {
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    margin-top: 10px;
+    margin-top: 40px;
     background-color: #0469c73d;
     padding: 20px 20px;
     display: flex;
     font-weight: 350;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
 }

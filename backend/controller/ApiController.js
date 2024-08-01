@@ -1,12 +1,13 @@
+require('dotenv').config();
 const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey('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');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 class ApiController {
     async sendEmail(req, res) {
         const { recipient, weatherInfo } = req.body;
 
         const { city, forecast } = weatherInfo;
-        console.log(forecast)
+        
         const forecastHtml = forecast.map(f => `
             <tr>
                 <td style="padding: 10px; border: 1px solid #ddd;">${new Date(f.dt_txt).toLocaleString([], { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}</td>

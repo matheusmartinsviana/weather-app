@@ -1,4 +1,4 @@
-# Weather App 
+# Weather App
 
 <img src="./src/assets/img/pngegg.png" height="80" width="80">
 
@@ -40,3 +40,11 @@ To deploy the application, follow these steps:
 - **cors**: To authorize requests.
 - **express**: To create a server for handling frontend requests.
 - **SendGrid API**: To send emails with the weather information.
+
+###
+
+## Result from email message
+<div style="display: flex; justify-content: center; align-items: center;">
+    <img src="src/assets/email/headerEmailMessage.png" alt="Body from email message with the information about weather" style="width: 100%; max-width: 600px; height: auto;"/>
+    <img src="src/assets/email/bodyEmailMessage.png" alt="Body from email message with the information about weather" style="width: 100%; max-width: 600px; height: auto;"/>
+</div>
