@@ -45,6 +45,6 @@ To deploy the application, follow these steps:
 
 ## Result from email message
 <div style="display: flex; justify-content: center; align-items: center;">
-    <img src="src/assets/email/headerEmailMessage.png" alt="Body from email message with the information about weather" style="width: 100%; max-width: 600px; height: auto;"/>
-    <img src="src/assets/email/bodyEmailMessage.png" alt="Body from email message with the information about weather" style="width: 100%; max-width: 600px; height: auto;"/>
+    <img src="src/assets/email/headerEmailMessage.png" alt="Body from email message with the information about weather" style="width: 100%; max-width: 400px; height: auto;"/>
+    <img src="src/assets/email/bodyEmailMessage.png" alt="Body from email message with the information about weather" style="width: 100%; max-width: 400px; height: auto;"/>
 </div>
