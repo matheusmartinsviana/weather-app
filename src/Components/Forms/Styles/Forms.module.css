@@ -84,10 +84,16 @@
 
 .modalContent {
     background: white;
+    color: black;
     padding: 20px;
+    font-weight: 350;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modalContent p {
+    font-weight: 350;
 }
 
 .closeButton {
